@@ -162,4 +162,25 @@ console.log(currentDate.getMonth()+1);
 console.log(currentDate.getFullYear());
 console.log(currentDate.getHours());
 console.log(currentDate.getMinutes())
-console.log(currentDate.getTime());
+console.log(currentDate.getTime()); //time in milliseconds since 1970
+
+//JSON.parse
+//JSON.stringify
+const user={
+    name:"harkirat",
+    gender:"male"
+}
+
+user["name"]
+const finalString = JSON.stringify(user)
+console.log(finalString)
+
+//Maths ***************************************
+console.log(Math.random());
+console.log(Math.floor(2.344));
+console.log(Math.ceil(6.3549))
+
+
+
+//Objects *******************************************
+// look at objects and solve assignments 
