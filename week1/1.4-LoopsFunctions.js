@@ -53,3 +53,10 @@ function sumOfSomething(a,b,fn){
 }
 
 console.log(sumOfSomething(3,3,square))
+
+// Anonymous function 
+let anss=sumOfSomethings(2, 2, function(n){
+    return n*n;
+})
+
+console.log(anss)
