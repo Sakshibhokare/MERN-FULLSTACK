@@ -99,6 +99,7 @@ function logThings(str){
     console.log(ans)
 }
 
+
 firstArray.forEach(logThings)
 
 // the below things will be cover later 
