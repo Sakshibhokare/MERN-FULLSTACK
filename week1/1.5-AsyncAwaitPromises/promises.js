@@ -28,6 +28,7 @@ var p2=new Promise(function(resolve){
     
 })
 
+
 p2.then(function(){
     console.log(p2)
 })
