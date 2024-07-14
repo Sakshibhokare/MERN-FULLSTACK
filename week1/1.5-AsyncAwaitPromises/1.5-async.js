@@ -81,3 +81,7 @@ console.log(a);
 // event loop will take care to take the input from callback queue, the latest input will be taken to call stack 
 //small tasks will be done first in web api, it will arrange according to that in the callback queue
 // the event loop will pass the first stack to the call stack 
+
+
+
+
