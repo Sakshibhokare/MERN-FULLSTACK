@@ -20,4 +20,11 @@
 
 
 // What is an HTTP Server : this is a sort of protocol to communicate
+// URL 
+// protocol//url/route 
 
+// we have response body- 2+2 is equal to 4 
+
+// status code - 200, 404 
+
+// we have methods: post 
