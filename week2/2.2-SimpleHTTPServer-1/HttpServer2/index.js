@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 //body-parser
 //2 install body parser and import it 
 const bodyParser = require("body-parser")
@@ -45,7 +45,7 @@ app.post('/conversations',(req,res)=>{
 
 //fetch 
 // suppose we a Button, on clicking on it something should happen, then the fetch method will fetch the data which is required to display by clicking on it 
-
+// fetch is a web API 
 
 
 
