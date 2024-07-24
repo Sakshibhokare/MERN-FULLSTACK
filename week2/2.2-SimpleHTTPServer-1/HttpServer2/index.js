@@ -35,6 +35,8 @@ app.get("/",(req, res)=>{
 
 
 //post request 
+// req can have a body, query and so on 
+
 app.post('/conversations',(req,res)=>{
     console.log(req.headers)
     res.send({
@@ -52,3 +54,7 @@ app.post('/conversations',(req,res)=>{
 app.listen(port, ()=>{
     console.log(`app is running on port ${port}`)
 })
+
+//get: use to get some data
+// post: to post some data 
+// fetch: uses promises or something else 
