@@ -13,3 +13,16 @@
 // 10. nvm : 
 // 11. npm : node version manager/ 
 // 12. node :   to run js files/ node a.js
+
+// 13. rm: remove- it removes the current file 
+//  14. chmod: change file permission/ chmod ugo-rwx / write file or folder name for folder write -R first file/folder name -/+ add remove permission for rwx/ read, write and execute
+// 15. echo: to display particular msg 
+// 16. head and tail: head filename.txt - it will give first 10 files in any folder wise versa for tail 
+// 17. pipe operator: 
+// 18. wc:
+// 19. grep: 
+// 20. history: 
+// 21. script in bash: 
+// 22. Nodejs 
+// 23. Install nodejs in windows 
+// 24. grep, sed, awk:
