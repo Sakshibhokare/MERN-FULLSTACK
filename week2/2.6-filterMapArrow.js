@@ -30,6 +30,8 @@ console.log(ans)
 
 // **************************************************************
 // create a map function that takes 2 inputs an array and a transformation cllbacks/fn and transforms the array into a new one using the transformation fn 
+//create a map fn that takes an array nd a transform fn as input and  return the transformed array as output  
+
 
 
 //filtering 
@@ -59,4 +61,6 @@ const ans2 = arr.filter(filterLogic);
 
 
 console.log(ans2)
+
+
 
