@@ -112,9 +112,47 @@ app.post("/", function(req, res){
 // one more example 
 function validateInput (arr){
     const schema = zod.array(zod.number());
-    const response= schema.validate(arr);
+    const response= schema.safeParse(arr);
     
     console.log(response);
 }
 
 validateInput([1, 2,3 ,4 ])
+
+// use cases can be more complex 
+function validateInput2(obj){
+    const schemas = z.object({
+        email:zod.string().email(),
+        password: zod.string().min(8),
+        date: zod.date(),
+    })
+}
+
+
+//example
+app.post("/login", function(req, res){
+    const response1 = validateInput2(req.body)
+    if(!response1.success){
+        res.json({
+            msg:"your inputs are invalid"
+    })
+    return;
+}
+})
+
+
+// syntax 
+function middleware(){
+    return function(req, res, next){
+
+    }
+}
+
+app.use(middleware())
+app.use(express.json())
+
+
+
+
+
+// Authentication *******************************************
