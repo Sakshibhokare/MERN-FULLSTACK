@@ -52,8 +52,24 @@ async function getAnimalData(){
 // 2. the generated string and password with be given to the verification function 
 // 3. in the last will get the original output
 // verification is like anyone can decode but need the password to verify and get the original output 
+// example: digital signature: only the back can verify it anyone can get
 
 
 
 
-// local storage 2
+// local storage:
+// A place in your browser where you can store some data usually things that are stored include 
+// Authentication tokens
+// user language preference 
+// user theme preference 
+
+// example: someone is logging it will create JWT and store this token into the browser and this token going to be there in the browser for almost forever until we delete it 
+
+
+
+// Assignments ##########################
+// post and get request for sign in and login 
+
+// why do we use jwt instead encryption: this same assume as database call, this is most easiest
+
+

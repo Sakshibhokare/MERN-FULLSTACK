@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function getUserData(){
+            // we can get data directly using axios library 
+            // const response = axios.get("https://fakerapi.it") 
+            
+            const response = await fetch("https://fakerapi.it/api/v1/persons");
+            const finalData = await response.json();
+            document.getElementById("userData").innerHTML = JSON.stringify(finalData)
+        }
+    </script>
+
+    <div id="userData"></div>
+    <button onclick="getUserData()"> Get the user data </button>
+</body>
+</html>
