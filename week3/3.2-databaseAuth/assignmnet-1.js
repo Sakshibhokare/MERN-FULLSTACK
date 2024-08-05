@@ -30,7 +30,7 @@ const ALL_USERS = [
 ];
 
 function userExist(username, password){
-    const userExist= false;
+    let userExist= false;
 
     for(let i=0; i<ALL_USERS.length; i++){
         if(ALL_USERS[i].username===username && ALL_USERS.password===password){
@@ -67,3 +67,18 @@ app.post("/signin", function(req, res){
 
 // return an array of all users if user is signed in (token is correct) 
 // returns 403 status code if not 
+
+app.get("/users", function(req, res){
+    const token = req.headers.authorization;
+    try{
+        const decoded = jwt.verify(token, jwtPassword);
+        const username = decoded.username;
+        //return the list of users other than this username 
+    }
+    catch(err){
+        return res.status(403).json({
+            msg:"Invalid token",
+        })
+
+    }
+})
