@@ -70,15 +70,20 @@ app.post("/signin", function(req, res){
 
 app.get("/users", function(req, res){
     const token = req.headers.authorization;
-    try{
+
         const decoded = jwt.verify(token, jwtPassword);
         const username = decoded.username;
         //return the list of users other than this username 
-    }
-    catch(err){
-        return res.status(403).json({
-            msg:"Invalid token",
+        res.json({
+            
+            users:ALL_USERS.filter(function(value){
+                if(value.username == username){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            })
         })
-
     }
-})
+)
