@@ -73,3 +73,35 @@ async function getAnimalData(){
 // why do we use jwt instead encryption: this same assume as database call, this is most easiest
 
 
+
+
+
+// Databases ***************************************************************
+// types of dbs 
+// Graph DBS 
+// Vector Dbs 
+// SQL DBS 
+// NoSql dbs - easy to understand - let you create an db, tables 
+
+// How does the backend connect to the db ?
+// Express let u create an HTTP server 
+// jsonwebtokens library lets you create jets 
+// Mongoose lets you connect to your database 
+
+// Assignment #########################
+// database connectivity 
+
+const mongoose = require("mongoose");
+
+mongoose.connect("database URL");
+
+//create table 
+const user = mongoose.model("User",{name:String, email:String, password:String});
+
+const User = new user({
+    name:"sakshi",
+    email:"sakshi@gmail.com",
+    password:"sakshi@111"
+})
+
+User.save(); //this will save the data for the user 
