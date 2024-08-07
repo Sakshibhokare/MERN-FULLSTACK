@@ -90,3 +90,21 @@ function decoded(token){
 }
 
 console.log(decoded("jbvjsbjhjf")) //must give false 
+
+
+//3rd assignment 
+function verified(token){
+    let ans = true;
+    try{
+        jwt.verify(token, jwtPassword);
+        return true; 
+    }
+    catch(e){
+ans=false ; 
+    }
+    
+        return ans; 
+}
+
+const ansjwt= verified("kcjhhcjkjkhnkn")
+console.log(ansjwt); // it will return false 
