@@ -16,7 +16,7 @@
 //         }
 
 
-async function getAnimalData(){
+async function getAnimalData() {
     const response = await fetch("hettps://fakeapi.it/api/v1/person");
     const finalData = await response.json();
     console.log(finalData);
@@ -96,12 +96,37 @@ const mongoose = require("mongoose");
 mongoose.connect("database URL");
 
 //create table 
-const user = mongoose.model("User",{name:String, email:String, password:String});
+const user = mongoose.model("User", { name: String, email: String, password: String });
 
-const User = new user({
-    name:"sakshi",
-    email:"sakshi@gmail.com",
-    password:"sakshi@111"
+
+// const User = new user({
+//     name:"sakshi",
+//     email:"sakshi@gmail.com",
+//     password:"sakshi@111"
+// })
+
+User.save(); //this will save the data for the user /
+
+app.post("/signup", function (req, res) {
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    //user already exists
+    const existUser = User.findOne({email:username});
+    if(existUser){
+        return res.status(400).send("Username already exists")
+    }
+
+
+    const User = new user({
+        name: username,
+        email: email,
+        password:password
+    })
+
+    User.save()
+    res.json({
+        "msg":"User Created Successfully"
+    })
 })
-
-User.save(); //this will save the data for the user 
