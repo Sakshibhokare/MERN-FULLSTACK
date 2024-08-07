@@ -112,8 +112,8 @@ app.post("/signup", function (req, res) {
     const email = req.body.email;
     const password = req.body.password;
 
-    //user already exists
-    const existUser = User.findOne({email:username});
+    //user already exists search in table user 
+    const existUser = user.findOne({email:username});
     if(existUser){
         return res.status(400).send("Username already exists")
     }
@@ -130,3 +130,6 @@ app.post("/signup", function (req, res) {
         "msg":"User Created Successfully"
     })
 })
+
+
+
