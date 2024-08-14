@@ -78,3 +78,8 @@ app.get("/ride2", isOldEnoughMiddleware, function(req, res){
         msg:"you have successfully riden ride 2"
     })
 })
+
+//if you want any middleware to use on all routes then use as follow
+//this should mention on the top 
+app.use(isOldEnoughMiddleware); // this will only work for the routes mentioned after this line 
+
