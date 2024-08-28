@@ -5,7 +5,7 @@
         //and i ve been called atleast once
         clearTimeout(timeout) //delay will be canceled
 
-        //if you are hitting the settimeout again and again then you will be cancelling it at the same time, whenever you take a pause it will execute the function
+        //if you are hitting the setTimeout again and again then you will be cancelling it at the same time, whenever you take a pause it will execute the function
         const timeout=setTimeout(function(){
             populateDiv()
         },1000) 
