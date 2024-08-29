@@ -5,10 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        let globalId=1;
+
+        function markAsDone(todoId){
+            const parent=document.getElementById(todoId);
+            parent.children[2].innerHTML="Done!";
+        }
+
+        function createChild(title, description, id){
+            const child=document.createElement("div");
+            const firstGrandChild=document.createElement("div");
+            firstGrandChild.innerHTML=title;
+            const secondGrandChild=document.createElement("div");
+            secondGrandChild.innerHTML=description;
+            const thirdGrandChild=document.createElement("button");
+            thirdGrandChild.innerHTML="Mark as done";
+            thirdGrandChild.setAttribute("onclick", `markAsDone(${id})`)
+
+            child.appendChild(firstGrandChild);
+            child.appendChild(secondGrandChild);
+            child.appendChild(thirdGrandChild);
+            child.setAttribute("id", id);
+            return child;
+        }
+
+
         function addTodo(){
             const title=document.getElementById("title").value;
             const description=document.getElementById("description").value;
+           const parent= document.getElementById("container");  //innerHTMl is good when you want to add a single element or line
 
+        parent.appendChild(createChild(title, description, globalId++));
+
+
+            //appendChild is useful for adding multiple line of code 
+            //document.createElement: it will create a element which is not present in document
+                // const outerDiv=document.createElement("div");
+                // outerDiv.innerHTML=title;
+                // document.getElementById("container").appendChild(outerDiv)
+
+                // we want
+                // <div> outerDiv: we create three inner div and then append those to outerDiv and then the final outer div we append to the container 
+                //     <div> title </div>
+                //     </div> description </div>
+                //     <button></button>
+                //  </div> 
+                
         }
     </script>
 </head>
@@ -17,6 +59,10 @@
     <br><br>
     <input id="description" type="text" placeholder="Description">
     <br><br>
-    <button>Add To Do</button>
+    <button onclick="addTodo()">Add To Do</button>
+
+    <div id="container"></div>
+
+
 </body>
 </html>
