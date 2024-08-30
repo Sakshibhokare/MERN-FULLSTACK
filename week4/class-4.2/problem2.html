@@ -76,6 +76,30 @@
         updateDomAccToState(json.todos) //take current state as input and render it on the screen
     }, 5000)
 //every time we get the state/input we will calculate the difference, if it is change then will update the dom without clearing it 
+// ##### Assignment #####
+
+
+
+// What is the easiest way to create a dynamic frontend websites ? 
+// 1. update a state variable
+// 2. Delegate the task of figuring out diff to a hefty function 
+// 3. tell the hefty function how to add, update and remove elements 
+
+function addTodo(){
+    //big function we wrote in the beginning
+}
+
+function removeTodo(todo){
+    const element = document.getElementById(todo.id);
+    element.parent.removeChild(element);
+}
+
+function updateTodo(oldTodo, newTodo){
+    const element=document.getElementById(oldTodo.id);
+    element.children[0].innerHTML=newTodo.title;
+    element.children[1].innerHTML=newTodo.description;
+    element.children[0].innerHTML=newTodo.completed? "Mark as done" : "Done";
+}
 
 
     </script>
