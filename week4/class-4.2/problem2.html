@@ -1,2 +1,83 @@
 <!-- You have given an array as an input you have to write an function to render the data on the screen  -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <input id="title" type="text" placeholder="title">
+    <br><br>
+    <input id="description" type="text" placeholder="Description">
+    <br><br>
+
+    <div id="container"></div>
+
+
+
+
+
+
+
+
+    <script>
+        let globalId=1;
+
+        function createChild(title, description, id){
+            const child=document.createElement("div");
+            const firstGrandChild=document.createElement("div");
+            firstGrandChild.innerHTML=title;
+            const secondGrandChild=document.createElement("div");
+            secondGrandChild.innerHTML=description;
+            const thirdGrandChild=document.createElement("button");
+            thirdGrandChild.innerHTML="Mark as done";
+            thirdGrandChild.setAttribute("onclick", `markAsDone(${id})`)
+
+            child.appendChild(firstGrandChild);
+            child.appendChild(secondGrandChild);
+            child.appendChild(thirdGrandChild);
+            child.setAttribute("id", id); 
+            return child;
+        }
+
+
+        //state will always be an array
+        //every element of state would have a title, description and id
+        //
+        function updateDomAccToState(state){
+            const parent=document.getElementById("container");
+            parent.innerHTML="";
+            for(let i=0; i<state.length; i++){
+                const child = createChild(state[i].title, state[i].description, state[i].id);
+                parent.appendChild(child);
+            }
+        }
+//given a state you can show whatever you want on the screen
+        updateDomAccToState([
+        {
+            title:"go to Gym",
+            description:"go to gym at 5-7",
+            id:1
+        },
+        {
+            title:"go to park",
+            description:"go to park at 7",
+            id:1
+        },
+    ])
+
+//every 5 second it will refresh and check if new data coming from the backend it will be displayed on the screen
+    window.setInterval(async function() {
+        const res = await fetch("https://sum-server.100xdevs.com/todos")
+        const json= await res.json();
+        updateDomAccToState(json.todos) //take current state as input and render it on the screen
+    }, 5000)
+//every time we get the state/input we will calculate the difference, if it is change then will update the dom without clearing it 
+
+
+    </script>
+</body>
+</html>
