@@ -1,0 +1,26 @@
+example: you went to court and to will be infracting number of people, but there will a central place where your all data is present this place is secure
+what is the database in real?
+it is a place where data is stored almost forever, the browser interacts with express server and then to the database 
+
+databases are replicated in multiple data centers 
+
+example: for Linkedin
+user data
+users posts 
+users connection relationships 
+
+why dont we let user hit the databases directly?
+what extra does the http server provide exactly?
+reasons:
+1. databases were are created using protocols that browsers dont understand 
+2. databases don't have granual access as a first class citizen. very hard to user specific access in them 
+3. there are some databases that let you get rid of the http server and try their best to provide granola access 
+
+Database mainly works on CRUD operations 
+
+mongoose: the first step is to define your schema
+
+mongoDB is schema less which means the non-structured
+
+SQL-structured language here you need to mention the structure of the database first 
+
