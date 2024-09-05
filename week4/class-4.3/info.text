@@ -9,7 +9,7 @@ user data
 users posts 
 users connection relationships 
 
-why dont we let user hit the databases directly?
+why don't we let user hit the databases directly?
 what extra does the http server provide exactly?
 reasons:
 1. databases were are created using protocols that browsers dont understand 
