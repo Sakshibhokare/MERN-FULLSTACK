@@ -34,10 +34,27 @@ router.post('/courses', adminMiddleware, async(req, res) => {
         price:price
     })
 
+    res.json({
+        msg:"Course created successfully", courseId: newCourse_id
+    })
+
 });
 
-router.get('/courses', adminMiddleware, (req, res) => {
+router.get('/courses', adminMiddleware, async(req, res) => {
     // Implement fetching all courses logic
+
+    const response= await Course.find({})
+    res.json({
+        courses:response
+    })
+
+    // this is the one of the way to get all courses 
+    // Course.find({})
+    // .then(function(response){
+    //     res.json({
+    //         courses:response
+    //     })
+    // })
 });
 
 module.exports = router;
