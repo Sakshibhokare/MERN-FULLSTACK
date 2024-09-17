@@ -28,22 +28,42 @@ router.get('/courses', async(req, res) => {
     })
 });
 
-router.post('/courses/:courseId', userMiddleware, (req, res) => {
+router.post('/courses/:courseId', userMiddleware, async (req, res) => {
     // Implement course purchase logic
     const courseID= req.params.courseId; //get the course id from the URL
     const username = req.headers.username;
     //get the username and update the purchased Courses by using courseId 
-    User.updateOne({
-        username:username
-    },{
-        purchasedCourses:{
-            "$push":courseID
-        }
-    });
+    try{
+        await User.updateOne({
+            username:username
+        },{
+            "$push":{
+                purchasedCourses: courseID
+            }
+        });
+    }catch(e){
+        console.log(e)
+    }
+    
 });
 
-router.get('/purchasedCourses', userMiddleware, (req, res) => {
+router.get('/purchasedCourses', userMiddleware, async(req, res) => {
     // Implement fetching purchased courses logic
+    const user = await User.findOne({
+        username:req.headers.username
+    })
+
+    console.log(user.purchasedCourses) //this will return the list of purchased courses 
+
+    const courses = await Course.find({
+        _id:{
+            "in":user.purchasedCourses //will use the courseId coming from this line and will find the Course in Course table and then will return 
+        }
+    })
+    res.json({
+        courses:courses
+    })
+
 });
 
 module.exports = router
