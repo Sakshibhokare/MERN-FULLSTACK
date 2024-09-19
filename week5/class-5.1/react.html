@@ -1,0 +1,43 @@
+<!-- // Why do you need React or any front end framework
+// react solves for dynamic websites, these libraries make DOM manipulation easier -->
+<!-- require to write too musch code  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function onButtonPress(){
+            const currentValue=document.getElementById("btn").innerHTML;
+            console.log( currentValue.split(" "));
+            const currentCounter = currentValue.split(" ")[1];
+            const newValue= parseInt(currentCounter)+1;
+            document.getElementById("btn").innerHTML="Counter "+newValue;
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    <button onclick="onButtonPress()" id="btn">Counter 0</button>
+</body>
+</html>
+
+<!-- Some react jargon  -->
+<!-- two important things for react are, state and component -->
+<!-- state: an object that represents the current state of the app, anything that will change that need to hold in state  -->
+<!-- example, count for counter application  -->
+<!-- for the linkedin Topbar it could be something like this-  state would be  {
+{ topbar:{
+home:0,
+jobs:0,
+messages:0,
+notifications:0}
+}}-->
+
+<!-- components: it is an HTML template, it is a dynamic snippet -->
+
+<!-- Re-rendering: state is change and the dom element value is changed it is called as a Re-render -->
