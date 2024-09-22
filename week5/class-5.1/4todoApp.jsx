@@ -54,3 +54,20 @@ function Todo(props){
 }
 
 }
+
+//add todo into the Array 
+function addTodo(){
+    let newTodos=[];
+    //first take original elements of an array
+    for(let i=0; i<todos.length; i++){
+        newTodos.push(todos[i])
+    }
+    //add random todos 
+    newTodos.push({
+        title:"jbcjbn",
+        description:"nckndkjkn"
+    })
+
+    //every time when setTodos will get call react will get to know that value is updated and that value would be visible on the screen 
+    setTodos(newTodos)
+}
