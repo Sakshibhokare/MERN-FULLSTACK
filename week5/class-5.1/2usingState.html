@@ -1,0 +1,53 @@
+<!-- create a counter app using state and components  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="buttonParent"></div>
+
+    <script>
+        // need to write :initial state, state update and component 
+       //initial state 
+        let state={
+            count: 0
+        }
+
+
+        //state update 
+        function onButtonPress(){
+            state.count++;
+            buttonComponentReRender();
+        }
+
+        // we do not need to write this in react 
+        function buttonComponentReRender(){
+            //need to clear the dom else multiple button would be displayed
+            document.getElementById("buttonParent").innerHTML="";
+            const component=buttonComponent(state.count);
+            document.getElementById("buttonParent").appendChild(component);
+        }
+
+        // this is button component and returns the div 
+        function buttonComponent(count){
+            const button=document.createElement("button");
+            button.innerHTML=`Counter ${count}`;
+            button.setAttribute("onclick", `onButtonPress()`);
+            return button;
+            // this will return 
+            // <button onclick="onButtonRender">
+            // counter 2
+            // </button>
+        }
+
+        //first time need to rerender 
+        buttonComponentReRender()
+
+    </script>
+</body>
+</html>
