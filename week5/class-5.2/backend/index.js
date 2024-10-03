@@ -2,8 +2,10 @@ const express = require("express");
 const { createTodo, updateTodo } = require("./types");
 const {todo}= require("./db")
 const app=express();
+const cors= require("cors"); //this will allow the backend to get rendered on any frontend 
 
 app.use(express.json());
+app.use(cors());
 
 //create zod to validate hence cretaed type.js
 app.post("/todo", async function(req, res){
