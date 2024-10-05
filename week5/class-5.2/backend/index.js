@@ -5,7 +5,7 @@ const app=express();
 const cors= require("cors"); //this will allow the backend to get rendered on any frontend 
 
 app.use(express.json());
-app.use(cors());
+app.use(cors()); //it make backend insecure
 
 //create zod to validate hence cretaed type.js
 app.post("/todo", async function(req, res){
