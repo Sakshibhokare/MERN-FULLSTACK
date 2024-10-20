@@ -10,13 +10,79 @@ import './App.css'
 // 3. iterate over the array to render all the TODOs 
 // 4. A button in the top level app component to add a new TODO 
 function App() {
+//  2nd
+  const [todos, setTodos] = useState([
+    {
+      id:1,
+      title:"hello first title",
+      description:"first description"
+    },
+    {
+      id:1,
+      title:"hello second title",
+      description:"second description"
+    },
+    {
+      id:1,
+      title:"hello third title",
+      description:"third description"
+    },
+  ])
 
+  function addTodo(){
+    //...todos means take existing and then add further
+    setTodos([...todos, {
+      id:4,
+      title: Math.random(),
+      description:Math.random()
+    }])
+
+
+    
+    //another way of doing the same thing
+    const newTodos=[]  //create an empty array
+
+    //add previous elements to the new add 
+    for(let i=0; i<todos.length; i++){
+      newTodos.push(todos[i]);
+    }
+
+    //add new todo
+    newTodos.push({
+      id:4,
+      title:Math.random(),
+      description:"using second method"
+    })
+
+    setTodos(newTodos);
+
+  }
+
+  
 
   return (
     <>
 
+    <button onClick={addTodo}>Add a Todo</button>
+
+    {todos.map(function(todo){
+      return <Todo title={todo.title} description={todo.description}></Todo>
+    })}
     </>
   )
+}
+
+// 1st 
+function Todo({title, description}){
+  return <div>
+    <h1>
+      {title}
+    </h1>
+
+    <h5>
+      {description}
+    </h5>
+  </div>
 }
 
 
