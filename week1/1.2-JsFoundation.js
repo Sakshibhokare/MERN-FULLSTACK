@@ -19,7 +19,7 @@
 // step1: write code 
 // step2: run the code, it runs the code line by line 
 
-console.log("RESTART")
+console.log("RESTART 2nd")
 
 // Single threaded nature of js ----------------------------------------------
 // This means that it can only execute one task at a time.
@@ -125,7 +125,7 @@ const value = sum(10,2)
 console.log(value)
 
 
-// Callback functions 
+// Callback functions : we send function as an argument 
 function findsum(a, b, fnToCall){
         let result= a+b;
         fnToCall(result)
