@@ -41,7 +41,7 @@ var p3 = new Promise(function(resolve){
     }, 4000)
 })
 
-p3.then(function(){
+p3.then(function(){ //callback and .then 
     console.log(p3)
 })
 
