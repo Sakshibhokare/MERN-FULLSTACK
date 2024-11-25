@@ -7,7 +7,7 @@
 
 // what is ECMAScript, Javascript, nodejs, Bun 
 // 1. ECMAScript: is the specification on which the javascript is based 
-// 2. Javascript: Javascript is a scripting language 
+// 2. Javascript: Javascript is a scripting language, v8 compiler is use to compile js code
 // 3. Nodejs: Backend framework 
 // 4.Bun: bun is much faster than nodejs, it is written in zig 
 

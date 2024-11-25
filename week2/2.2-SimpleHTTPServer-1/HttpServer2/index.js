@@ -5,10 +5,10 @@ const port = process.env.PORT || 4000;
 //2 install body parser and import it 
 const bodyParser = require("body-parser")
 //middlewares
-app.use(bodyParser.json());
+app.use(bodyParser.json()); 
 //this will extract the json and put instead of req.body, the request must be post 
 app.post("/",(req, res)=>{
-    console.log(req.body);
+    console.log(req.body); //it requires body parser to get data as .body
     res.send("Http Server 3");
 })
 
@@ -38,7 +38,7 @@ app.get("/",(req, res)=>{
 // req can have a body, query and so on 
 
 app.post('/conversations',(req,res)=>{
-    console.log(req.headers)
+    console.log(req.headers) //gives a object that will have some values i.e. auth
     res.send({
         msg:"2+2=4"
     })
@@ -55,6 +55,6 @@ app.listen(port, ()=>{
     console.log(`app is running on port ${port}`)
 })
 
-//get: use to get some data
-// post: to post some data 
+//get: use to get some data from the backend
+// post: to post some data to the backend
 // fetch: uses promises or something else 
