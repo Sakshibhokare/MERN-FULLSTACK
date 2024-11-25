@@ -26,7 +26,7 @@ function findSum(n){
 }
 
 function findSumTill100(){
-   console.log( findSum(100));
+    console.log( findSum(100));
 }
 
 setTimeout(findSumTill100, 2000) //it does not waited for 1 sec, it will go ahead and complete the next tasks 

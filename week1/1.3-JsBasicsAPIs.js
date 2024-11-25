@@ -10,7 +10,7 @@ getLength("myNameisSakshi");
 // Index of "second" word 
 function findIndex(str, target){
     console.log("Original String:", str);
-    console.log("Index:", str.indexOf(target));
+    console.log("Index:*", str.indexOf(target));
 }
 
 findIndex("hello everyone", "every")
@@ -36,7 +36,7 @@ function getSlice(str, start, end){
     console.log("after slice: ", str.slice(start, end));
 }
 // starting from zero does not include the ending char 
-getSlice("hello Duniya", 5, 10);
+getSlice("hello Duniya", 6, 10);
 let content="My name is sakshi";
 console.log(content.slice(3, 8))
 
@@ -178,7 +178,7 @@ console.log(finalString)
 
 //Maths ***************************************
 console.log(Math.random());
-console.log(Math.floor(2.344));
+console.log(Math.floor(2.644));
 console.log(Math.ceil(6.3549))
 
 

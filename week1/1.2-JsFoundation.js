@@ -145,6 +145,8 @@ function displayResultPassive(data){
 const ans=findsum(5,70, displayResult);
 return ans;
 
+
+
 // event loops 
 // callbackqueue
 // Sychronous and asynchronous functions 

@@ -33,4 +33,16 @@ p2.then(function(){
     console.log(p2)
 })
 
+// practice 2nd 
+
+var p3 = new Promise(function(resolve){
+    setTimeout(function(){
+        resolve("practice")
+    }, 4000)
+})
+
+p3.then(function(){
+    console.log(p3)
+})
+
 
