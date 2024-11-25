@@ -31,10 +31,28 @@ function sp2(){
     return p;
 }
 
-//await is only valid inside the async function 
+//await is only valid inside the async function: this will save callbacks and prevent using .then method 
 async function main2(){
     const value= await sp2();
     console.log(value);
 }
 
 main2();
+
+// Async and await practice 
+function sp3(){
+    let p= new Promise(function(resolve){
+        setTimeout(function(){
+            resolve("practice async and await")
+        }, 5000)
+    })
+
+    return p;
+}
+
+async function main3(){
+    let value= await sp3();
+    console.log(value);
+}
+
+main3(); 
