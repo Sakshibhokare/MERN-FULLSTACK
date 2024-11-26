@@ -25,6 +25,9 @@ function transform(i){
 // map requires input and a function to work on that input 
 // map(arr, transform);
 let ans = input.map(transform);
+// let ans = arr.map(function(){
+        
+// })
 console.log(ans)
 
 

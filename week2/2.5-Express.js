@@ -1,7 +1,18 @@
+//HTTP is a protocall you can write in any language, to create a HTTP server we use express 
 // what is express: 
 // example: logic is DOMRectReadOnly, when you call it, you giving your functionality to the world 
 // people need to know the address of a doctor- this is what http server do
 // express is the way to express your logic to the world 
+// steps to create a http server 
+
+// npm init 
+// 1. const express = require("express")
+// 2. npm install express 
+// 3. const app = express() on this app will add functionality and logic
+// app.get("/", function(req, res){
+//     res.send("hey there")
+// })
+// 4. app.listen(3000)
 const express = require("express")
 //logic
 function calc(n) {
@@ -12,17 +23,17 @@ function calc(n) {
     return ans;
 }
 
-const app = express();
+const app = express(); //1. app instance is the room like functionality
 
 //express gives two args req and res it gets called whenever the user is coming on the address
-app.get("/", function (req, res) {
+app.get("/", function (req, res) { //2. when someone will come to this location, the logic will get rendered and the user will be able to see further things
     const n = req.query.n; //localhost:3000/?n=30 output:435 will be visible on screen 
     //express
     const ans = calc(n);
     res.send(ans);
 })
 
-//address
+//3. deciding a address of a clinic 
 app.listen(3000);
 
 
@@ -56,7 +67,7 @@ const user = {
 // how many kidney he has 
 app.get("/", (req, res0) => {
     const jonnyKidneys = user[0].kindeys;
-    const numberOfKidney = kidneys.length;
+    const numberOfKidney = jonnyKidneys.length;
     let number = 0; 4
     for (let i = 0; i < jonnyKidneys.length; i++) {
         number += i;
@@ -131,7 +142,7 @@ app.delete("/", (req, res) => {
 
 // edge cases
 // what if there is no kidneys
-// we need to test here at lease one unhealthy kidney must be present else return status code 411 for wrong input
+// we need to test here at least one unhealthy kidney must be present else return status code 411 for wrong input
 // we can define in another function also 
 app.delete("/", (req, res) => {
     //filter
