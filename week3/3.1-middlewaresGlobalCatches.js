@@ -37,7 +37,7 @@ app.use(express.json()) //it a middleware
 
 // Input validations ************
 // we verify the input here 
-// if the inputs are not varlid then the server might crashed 
+// if the inputs are not verified then the server might get crashed 
 app.post("/health-checkup", function(req, res){
     const kidneys = req.body.kidneys;
 
@@ -126,6 +126,8 @@ function validateInput2(obj){
         password: zod.string().min(8),
         date: zod.date(),
     })
+    let ans= schemas.safeParse(obj);
+    console.log(ans)
 }
 
 
