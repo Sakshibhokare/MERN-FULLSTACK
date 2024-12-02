@@ -1,9 +1,9 @@
-// My cheque nook == my Json web token 
+// My cheque book == my Json web token 
 // for example: we sign in to chatgpt and jwt token will be sent to the browser 
 // that jwt token can be get verified only with the JWt password 
 
 // JWT - generating JWT 
-const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken"); 
 
 const value = {
     name:"sakshi",
