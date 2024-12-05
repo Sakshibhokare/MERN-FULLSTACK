@@ -12,7 +12,7 @@ users connection relationships
 why don't we let user hit the databases directly?
 what extra does the http server provide exactly?
 reasons:
-1. databases were are created using protocols that browsers dont understand 
+1. databases are created using protocols that browsers dont understand 
 2. databases don't have granual access as a first class citizen. very hard to user specific access in them 
 3. there are some databases that let you get rid of the http server and try their best to provide granola access 
 
@@ -34,7 +34,7 @@ const userSchema= new mongoose.Schema({
         ref:'Course'
     }]
 });
-
+ 
 const CourseSchema = new mongoose.Schema({
     title:String,
     price:5999
