@@ -26,7 +26,7 @@ function App(){
             <div>
                 {/* <button onClick={onClickHandler}>Counter {count}</button>  */}
 
-                {/* using cutom components  */}
+                {/* using custom components  */}
                 <CustomButton count={count} setCount={setCount}></CustomButton>
                 <CustomButton count={count+1} setCount={setCount}></CustomButton>
                 <CustomButton count={count*100} setCount={setCount}></CustomButton>
