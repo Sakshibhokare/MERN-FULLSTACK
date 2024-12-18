@@ -8,6 +8,7 @@
 
 const mongoose = require("mongoose");
 //create mongodb server and put the url here
+// will keep this link to .env -
 mongoose.connect("mongodb+srv://Sakshibhokare04:Sakshi111@cluster0.rjojvqj.mongodb.net/") //not a right practice to do in real
 const todoSchema=mongoose.Schema({
         title: String,

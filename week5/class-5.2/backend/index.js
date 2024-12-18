@@ -4,7 +4,7 @@ const {todo}= require("./db")
 const app=express();
 const cors= require("cors"); //this will allow the backend to get rendered on any frontend 
 
-app.use(express.json());
+app.use(express.json()); //to work all post endpoints
 app.use(cors()); //it make backend insecure
 
 //create zod to validate hence cretaed type.js
