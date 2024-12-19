@@ -5,8 +5,9 @@
 //     description:fkhkh
 // }]
 
-export function Todos({todos}){
+export function Todos({todos}){ //object destructuring 
     return <div>
+        {/* {} used before todos because it an array  */}
         {todos.map(function(todo){
             // eslint-disable-next-line react/jsx-key
             return <div>

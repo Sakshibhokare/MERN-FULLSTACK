@@ -7,7 +7,7 @@ export function CreateTodo(){
 
 
     return <div>
-        <input style={{
+        <input style={{ //FIRST one is for assigning attributes and second {} is for the object in which we are going to write styling 
             padding:10, 
             margin:20}} type="text" placeholder="Title" onChange={function(e){
                 //will get the current value of specific dom element it is same is documnet.querySelector().value
@@ -20,7 +20,7 @@ export function CreateTodo(){
             padding:10, 
             margin:20}} type="text" placeholder="description"
             onChange={function(e){
-                const value = e.target.value;
+                const value = e.target.value; //event.target.value, every time when the event happen it will take the value 
                 setDescription(value);
             }}/> <br /> <br />
 

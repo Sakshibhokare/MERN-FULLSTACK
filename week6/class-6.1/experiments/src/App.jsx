@@ -13,6 +13,7 @@ function TextComponent(){
   </div>
 }
 
+// eslint-disable-next-line react/prop-types
 function CardWrapper({innerComponent}){
   //create a div which has a border 
   //and inside the div, renders the prop
