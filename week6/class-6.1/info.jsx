@@ -3,15 +3,19 @@
 // why? 
 // 1. Makes it easy to reconciliation 
 
-function App(){
-    return(
-        <Header tittle="something"></Header>
-        // <Header tittle="something"></Header>
+function App() {
+    return (
+        // in div we can call header multiple times, parent element is always required 
+        <div> 
+            <Header tittle="something"></Header>
+            <Header tittle="something"></Header>
+        </div>
+
 
     )
 }
 
-function Header({title}){
+function Header({ title }) {
     return <div>
         {title}
     </div>
