@@ -49,6 +49,7 @@ function HeadersWithButtons() {
 // header component it will take title as an input 
 // eslint-disable-next-line react/prop-types
 //memo helps to not rerender the function when the props are not changed 
+// eslint-disable-next-line react/prop-types
 const Header = React.memo(function Header({ title }) {
     return <div>
         {title}
