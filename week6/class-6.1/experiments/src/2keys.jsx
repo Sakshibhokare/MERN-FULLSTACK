@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //React returns, React re-rendering, key, wrapper components, useEffect, useMemo, useCallback, useRef
 import React, { useState } from 'react'
 import './App.css'
