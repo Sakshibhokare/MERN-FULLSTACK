@@ -70,8 +70,9 @@ function App() {
             <button onClick={addTodo}>Add a Todo</button>
 
             {todos.map(function (todo) {
-                // if we does not add key then react will get confused easily so it is very impotant to add a key which i can uniquely identify the element when we delete or add something 
+                // if we does not add key then react will get confused easily so it is very important to add a key which i can uniquely identify the element when we delete or add something 
                 //it can increase the rerendering attempt 
+                // key is something that will uniquely indentify something for the specific things  
                 return <Todo key={todo.id} title={todo.title} description={todo.description}></Todo>
             })}
         </>
