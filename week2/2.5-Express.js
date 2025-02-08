@@ -43,7 +43,7 @@ app.listen(3000);
 // will get as- req.query.n 
 
 //3. req and res:
-// reuest methods:
+// request methods:
 // GET:for asking something
 // POST: put some data/ put new post on insta
 // PUT: update/ update username 
