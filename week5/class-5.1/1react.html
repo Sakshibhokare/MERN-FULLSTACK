@@ -1,33 +1,36 @@
 <!-- What is react  -->
- <!-- React is just a easier way of writting code of HTML/CSS/JS, that finally gets converted in to HTML CSS and JS, browswer does not understand  React the code finally gets converted to HTML CSS and JS-->
+<!-- React is just a easier way of writting code of HTML/CSS/JS, that finally gets converted in to HTML CSS and JS, browswer does not understand  React the code finally gets converted to HTML CSS and JS-->
 
- <!-- // Why do you need React or any front end framework
-  react has some libraries which make dom manipulation easier 
+<!-- // Why do you need React or any front end framework
+react has some libraries which make dom manipulation easier 
 // react solves for dynamic websites, these libraries make DOM manipulation easier -->
 
 <!-- require to write too much code  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
 
-        function onButtonPress(){
-            const currentValue=document.getElementById("btn").innerHTML;
-            console.log( currentValue.split(" "));
+        function onButtonPress() {
+            const currentValue = document.getElementById("btn").innerHTML;
+            console.log(currentValue.split(" "));
             const currentCounter = currentValue.split(" ")[1];
-            const newValue= parseInt(currentCounter)+1;
-            document.getElementById("btn").innerHTML="Counter "+newValue;
+            const newValue = parseInt(currentCounter) + 1;
+            document.getElementById("btn").innerHTML = "Counter " + newValue;
         }
 
     </script>
 </head>
+
 <body>
-    
+
     <button onclick="onButtonPress()" id="btn">Counter 0</button>
 </body>
+
 </html>
 
 <!-- Some react jargon  -->
@@ -44,8 +47,6 @@ notifications:0}
 
 <!-- components: it is an HTML template, it is a dynamic snippet -->
 
-<!-- Re-rendering: state is change and the dom element value is changed it is called as a Re-render -->
+<!-- Re-rendering: state is changed and the dom element value should get changed it is called as a Re-render -->
 
 <!-- You usually have to define all your components once and then all you have to do is update the state of your app, react takes care of re-rendering your app  -->
-
-
