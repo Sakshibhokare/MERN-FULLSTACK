@@ -106,5 +106,5 @@ ans=false ;
         return ans; 
 }
 
-const ansjwt= verified("kcjhhcjkjkhnkn")
+const ansjwt= verified("kcjhhcjkjkhnkn") 
 console.log(ansjwt); // it will return false 
