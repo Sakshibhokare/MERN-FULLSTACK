@@ -6,12 +6,10 @@
 function App() {
     return (
         // in div we can call header multiple times, parent element is always required 
-        <div> 
+        <div>
             <Header tittle="something"></Header>
             <Header tittle="something"></Header>
         </div>
-
-
     )
 }
 

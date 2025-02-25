@@ -3,24 +3,23 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from 'react'
 
-
 function App() {
-      <CardWrapper innerComponent={<TextComponent></TextComponent>}></CardWrapper>
+  <CardWrapper innerComponent={<TextComponent></TextComponent>}></CardWrapper>
 }
 
-function TextComponent(){
+function TextComponent() {
   return <div>
-      hi there
+    hi there
   </div>
 }
 
 // eslint-disable-next-line react/prop-types
-function CardWrapper({innerComponent}){
+function CardWrapper({ innerComponent }) {
   //create a div which has a border 
   //and inside the div, renders the prop
-  
-  return <div style={{border:"2px solid black", width:"20px", height:"20px"}}>
-        {innerComponent}
+
+  return <div style={{ border: "2px solid black", width: "20px", height: "20px" }}>
+    {innerComponent}
   </div>
 }
 
