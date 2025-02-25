@@ -5,10 +5,10 @@
 //     description:fkhkh
 // }]
 
-export function Todos({todos}){ //object destructuring 
+export function Todos({ todos }) { //object destructuring 
     return <div>
         {/* {} used before todos because it an array  */}
-        {todos.map(function(todo){
+        {todos.map(function (todo) {
             // eslint-disable-next-line react/jsx-key
             return <div>
                 <h1>{todo.title}</h1>
@@ -16,8 +16,5 @@ export function Todos({todos}){ //object destructuring
                 <button>{todo.completed == true ? "Completed" : "Mark as Completed"}</button>
             </div>
         })}
-
-        
-        
     </div>
 }

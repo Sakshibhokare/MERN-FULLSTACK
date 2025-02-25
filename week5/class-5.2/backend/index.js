@@ -17,7 +17,8 @@ app.post("/todo", async function (req, res) {
         })
         return;
     }
-    //put it in mongodb
+    //put it in mongodb 
+    //this is your schema for any database 
     await todo.create({
         title: createPayload.title,
         description: createPayload.description,
