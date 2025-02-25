@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+//******this component is created to get things from user and add to the backend 
 export function CreateTodo() {
     //props will be passed to parent -> child never to child to parent
     const [title, setTitle] = useState("");
@@ -11,11 +11,11 @@ export function CreateTodo() {
             padding: 10,
             margin: 20
         }}
-            type="text" placeholder="Title" onChange={function (e) {  //will get the current value of specific dom element it is same is documnet.querySelector().value
+            type="text" placeholder="Title" onChange={function (e) {  //will get the current value of specific dom element it is same is document.querySelector().value
                 const value = e.target.value;
                 setTitle(value);
-            }} /> <br /> <br />
-
+            }}
+        /> <br /> <br />
 
         <input style={{
             padding: 10,
@@ -25,7 +25,9 @@ export function CreateTodo() {
             onChange={function (e) {
                 const value = e.target.value; //event.target.value, every time when the event happen it will take the value 
                 setDescription(value);
-            }} /> <br /> <br />
+            }}
+        />
+        <br /> <br />
 
 
 
@@ -34,14 +36,16 @@ export function CreateTodo() {
             margin: 30
         }} onClick={() => {
             //axios can help you to stringify the json else you have to write it manually
-            fetch("https://localhost:3000/todos", {
+            fetch("https://localhost:3000/todo", {
                 method: "POST",
-                body: JSON.stringify({
-                    title: title,
-                    description: description
-                }),
+                body: JSON.stringify(
+                    { //if not using axios then write it as JSON.stringify
+                        title: title,
+                        description: description
+                    }
+                ),
                 headers: {
-                    "content-type": "application/json"  //app will always check the header need to understand the type of data, only mention type of data will be passed else it will be ignored
+                    "Content-type": "application/json"  //app will always check the header need to understand the type of data, only mention type of data will be passed else it will be ignored
                 }
             })
         }}>Add a Todo</button>

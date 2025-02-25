@@ -5,6 +5,8 @@
 //     description:fkhkh
 // }]
 
+
+//this file is created to show all the todos present in the backend, also which todos are getting added to the backend 
 export function Todos({ todos }) { //object destructuring 
     return <div>
         {/* {} used before todos because it an array  */}
