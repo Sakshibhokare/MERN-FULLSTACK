@@ -10,7 +10,9 @@
 // this will run only once, this will help to get stuck in to infinite loop
 // useEffect(function () {
 //     alert("hi")
-// }, [])
+// }, [counter])
+
+// when the counter will get changed this function will run
 
 // function inside the useEffect mounts that function
-// this requires dependency array 
+// this requires dependency array: this will represent when it should run 
