@@ -18,6 +18,7 @@ function CardWrapper({ innerComponent }) {
   //create a div which has a border 
   //and inside the div, renders the prop
 
+
   return <div style={{ border: "2px solid black", width: "20px", height: "20px" }}>
     {innerComponent}
   </div>
