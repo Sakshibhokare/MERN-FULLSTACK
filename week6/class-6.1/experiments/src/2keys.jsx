@@ -7,7 +7,7 @@ import './App.css'
 
 // keys in react 
 // 1. create a todo component that accepts title, description as input 
-// 2. initialise a state array that has 3 todos 
+// 2. Initialize a state array that has 3 todos 
 // 3. iterate over the array to render all the TODOs 
 // 4. A button in the top level app component to add a new TODO 
 //should not become 4 every time we render the APP()
@@ -80,6 +80,7 @@ function App() {
 }
 
 // 1st 
+// eslint-disable-next-line react/prop-types
 function Todo({ title, description }) {
     return <div>
         <h1>
