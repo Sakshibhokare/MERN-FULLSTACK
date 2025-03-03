@@ -1,0 +1,36 @@
+common hooks in react
+
+useEffect, useCallback, useMemo, custom hooks, prop drilling 
+
+1. side effects: when any operations that reach outside the functional scope of a react component.
+these operations can affect other components, interact with the 
+browser, or perform async.. data fetching
+
+setTimeout
+fetch
+setInterval
+document.getElementById("").innerHTML = ""
+
+
+2. Hooks: allow you to use states and features without creating class 
+from react 16.8 hooks are introduced 
+
+common hooks :
+1. useState : describe the state/change of an application 
+2. useEffect : use effects is something that that gives some conditions to do some tasks, 
+ for example if I want to fetch data from the backend,
+ i will wrap that query with the useEffect so that will not get hit 
+ every time the state changes, that query will get called only on 
+ specific conditions 
+
+ example, if there is an car race and there is one pit stop
+ where you can stop, but you can stop on every round, you will only stop 
+ at the pit stop if you facing any issue like refill the fuel 
+ to stop at the specific condition is the useEffect 
+
+ 
+3. useCallback
+4. useMemo
+5. useRef
+6. useContext
+
