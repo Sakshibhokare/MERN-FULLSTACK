@@ -39,8 +39,6 @@ useEffect(()=>{
 
 it is a popular hook to do side effects 
 
-
-
 3. useCallback
 4. useMemo
 5. useRef
