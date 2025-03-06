@@ -35,9 +35,10 @@ function App() {
   const [selectedID, setSelectedID] = useState(1);
 
   return <div>
-    <button onClick={function () {
-      setSelectedID(1)
-    }}>1</button>
+    <button onClick={
+      () => setSelectedID(1)
+    }>1</button>
+
     <button onClick={function () {
       setSelectedID(2)
     }}>2</button>
