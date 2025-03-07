@@ -61,6 +61,7 @@ function Todo({ id }) {
     })
   }, [id]); //id is passed as a dependency when the id get changes this will get rerender
   //if not passing id, even if you change id, or click on button nothing will happen
+  //important to add dependency 
 
   return (
     <>
