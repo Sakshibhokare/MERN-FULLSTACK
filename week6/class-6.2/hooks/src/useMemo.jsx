@@ -2,7 +2,7 @@
 // it means remembering some output for given input
 // you do not recompute it your directly return the output 
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 // example: brute force coming in my mind 
 
