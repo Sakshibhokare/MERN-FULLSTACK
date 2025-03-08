@@ -81,3 +81,8 @@ function Todo({ id }) {
 
 
 export default App
+
+//useEffect: add dependency to change/ or rerender happen, this does not return anything, extra variable needed
+//useMemo: when ever there is a operation going on use this, this will return a value 
+//useCallBack: useful when we are passing any function from parent class to child class as a prop,
+// wrap the function inside callBack which we wanted to pass to the child 
