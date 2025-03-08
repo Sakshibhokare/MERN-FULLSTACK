@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+// import { useState } from 'react';
 import axios from "axios";
 import './App.css'
 
@@ -30,7 +31,7 @@ import './App.css'
 
 
 
-//fetch data according to the id, on click buttons 
+// //fetch data according to the id, on click buttons 
 function App() {
   const [selectedID, setSelectedID] = useState(1);
 
@@ -49,6 +50,8 @@ function App() {
       setSelectedID(4)
     }}>4</button>
     <Todo id={selectedID}></Todo>
+
+
   </div>
 }
 
