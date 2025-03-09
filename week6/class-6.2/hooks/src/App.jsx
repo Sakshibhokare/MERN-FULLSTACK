@@ -86,3 +86,15 @@ export default App
 //useMemo: when ever there is a operation going on use this, this will return a value, we get back a value 
 //useCallBack: useful when we are passing any function from parent class to child class as a prop,
 // wrap the function inside callBack which we wanted to pass to the child, we get back a function 
+
+
+//memo is use to wrap something, only when the props changes it runs 
+// useMemo is hook to remember something 
+
+// var.imp*****
+// normal function will start with small later 
+//hooks will start with use..
+//components will start with capital later, return some jsx
+
+
+//
