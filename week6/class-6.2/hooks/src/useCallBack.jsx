@@ -96,6 +96,7 @@ function App() {
     </div>
 }
 
+// eslint-disable-next-line no-undef
 const ButtonComponent = memo(({ inputFunction }) => {
     console.log("child render")
 
