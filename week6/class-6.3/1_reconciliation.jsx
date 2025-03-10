@@ -13,6 +13,7 @@ const { useState } = require("react");
 
 
 //the actual update on DOM is react handling 
+//any time the state changes, rerender happens 
 function App() {
     const [count, setCount] = useState(0);
 
