@@ -37,7 +37,7 @@ function App() {
     const cryptoReturns = useCallback(
         function () {
             return exchange1Data.returns + exchange2Data.returns;
-        }
+        }, [exchange1Data]
     )
 
     const incomeTax = (cryptoReturns() + bankData.income) * 0.3
@@ -64,5 +64,5 @@ function Child({ cryptoReturns }) {
     </div>
 }
 
-// inshort the original function and that function we passed as a argument even though these are same, but react would treat them as both are different
+// in short the original function and that function we passed as a argument even though these are same, but react would treat them as both are different
 // that why we need useCallback hook, whenever we have to pass a function as an argument 
