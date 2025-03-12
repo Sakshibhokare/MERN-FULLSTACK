@@ -11,7 +11,6 @@ export function Assignment1() {
     }
 
     function handleDecrement() {
-        
     }
     // Your code ends here
 
