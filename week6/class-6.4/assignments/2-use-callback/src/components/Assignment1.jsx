@@ -11,13 +11,13 @@ export function Assignment1() {
     //if we add count as dependency then function will rerender because count is changing 
 
     const handleIncrement = useCallback(() => {
-        setCount(count + 1);
-    }, [])
+        setCount(count => count + 1);
+    }, []) //if I add count here, the count is changing anyways so this will rerender all the time 
 
 
 
     const handleDecrement = useCallback(() => {
-        setCount(count - 1);
+        setCount(count => count - 1); //when we give value in function then when we use decrement fun then only this will get rerender  
     }, [])
 
 
