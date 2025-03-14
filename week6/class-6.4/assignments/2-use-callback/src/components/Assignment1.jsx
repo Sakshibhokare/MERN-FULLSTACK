@@ -41,7 +41,6 @@ const CounterButtons = memo(
         </div>
     )
 )
-
 //memo and callbacks both should be used 
 // memo will tell you that props are not changed 
 // useCallback will handle rerendering when passing function in component 
