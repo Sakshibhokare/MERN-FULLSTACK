@@ -15,9 +15,9 @@ export function Assignment1() {
     }, []) //if I add count here, the count is changing anyways so this will rerender all the time 
 
 
-
+    //if we pass value in function to setValue then, this will only rerender the function which is used. 
     const handleDecrement = useCallback(() => {
-        setCount(count => count - 1); //when we give value in function then when we use decrement fun then only this will get rerender  
+        setCount(count => count - 1); //when we give value in function then, when we use decrement fun then only this will get rerender  
     }, [])
 
 
