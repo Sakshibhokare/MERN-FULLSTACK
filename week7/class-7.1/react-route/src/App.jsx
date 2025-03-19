@@ -4,7 +4,7 @@ import { Dashboard } from './components/Dashboard';
 import { Landing } from './components/Landing';
 
 function App() {
-  const navigate = useNavigate();
+
   return (
     <div>
       {/* if want something to stay on every route  */}
@@ -29,18 +29,12 @@ function App() {
       {/* to change page without reloading will use a hook useNavigate 
         */}
 
-      <button onClick={() => {
-        navigate("/")
-      }}>
-        Landing page
-      </button>
+      {/* vvvimp
+you can not use navigate outside the browserRouter */}
 
-      <button onClick={() => {
-        navigate("/dashboard")
-      }}>
-        Dashboard page
-      </button>
+
       <BrowserRouter>
+        <Appbar></Appbar>
         <Routes>
           <Route path="/dashboard" element={<Dashboard></Dashboard>}></Route>
           <Route path="/" element={<Landing></Landing>}></Route>
@@ -48,6 +42,24 @@ function App() {
       </BrowserRouter>
     </div>
   )
+}
+
+function Appbar() {
+  const navigate = useNavigate();
+  return <>
+    <button onClick={() => {
+      navigate("/")
+    }}>
+      Landing page
+    </button>
+
+    <button onClick={() => {
+      navigate("/dashboard")
+    }}>
+      Dashboard page
+    </button>
+  </>
+
 }
 
 export default App
