@@ -1,8 +1,10 @@
 // import './App.css'
+import React from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
-import { Dashboard } from './components/Dashboard';
-import { Landing } from './components/Landing';
-
+// import { Dashboard } from './components/Dashboard';
+// import { Landing } from './components/Landing';
+const Dashboard = React.lazy(() => import("./components/Dashboard"));
+const Landing = React.lazy(() => import("./components/Landing"))
 function App() {
 
   return (
@@ -32,7 +34,6 @@ function App() {
       {/* vvvimp
 you can not use navigate outside the browserRouter */}
 
-
       <BrowserRouter>
         <Appbar></Appbar>
         <Routes>
@@ -44,6 +45,7 @@ you can not use navigate outside the browserRouter */}
   )
 }
 
+//this will help to not reload the page while changing the page
 function Appbar() {
   const navigate = useNavigate();
   return <>
