@@ -1,10 +1,10 @@
 // import './App.css'
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 // import { Dashboard } from './components/Dashboard';
 // import { Landing } from './components/Landing';
-const Dashboard = React.lazy(() => import("./components/Dashboard"));
-const Landing = React.lazy(() => import("./components/Landing"))
+const Dashboard = lazy(() => import("./components/Dashboard"));
+const Landing = lazy(() => import("./components/Landing"))
 function App() {
 
   return (
@@ -65,3 +65,4 @@ function Appbar() {
 }
 
 export default App
+
