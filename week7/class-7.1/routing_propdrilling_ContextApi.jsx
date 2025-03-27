@@ -16,5 +16,3 @@ function App() {
         </Routes>
     </BrowserRouter>
 }
-
-
