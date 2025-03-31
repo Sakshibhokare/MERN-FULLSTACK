@@ -10,6 +10,7 @@
 // basic routing 
 function App() {
     <BrowserRouter>
+
         <Routes>
             <Route path="/dashboard" element={<Dashborad></Dashborad>}></Route>
             <Route path="/" element={<Landing></Landing>}></Route>
