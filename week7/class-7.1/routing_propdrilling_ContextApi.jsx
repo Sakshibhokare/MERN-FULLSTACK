@@ -14,5 +14,6 @@ function App() {
             <Route path="/dashboard" element={<Dashborad></Dashborad>}></Route>
             <Route path="/" element={<Landing></Landing>}></Route>
         </Routes>
+
     </BrowserRouter>
 }
