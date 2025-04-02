@@ -1,0 +1,1 @@
+//context: we define the variable outside, then we use that variable directly, without passing as a prop
