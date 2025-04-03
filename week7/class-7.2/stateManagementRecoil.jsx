@@ -8,4 +8,13 @@
 // Recoil , Zustand, redux
 
 // recoil has the concept of an atom
-// an atom can be defined outside the component 
+// an atom can be defined outside the component
+
+
+// recoil things to learn
+// RecoilRoot
+// atom
+// useRecoilState: it give you the current value and how to update the value
+// useRecoilValue: this will only give you the value
+// useSetRecoilState: this will allow you the update the value
+// selector 
