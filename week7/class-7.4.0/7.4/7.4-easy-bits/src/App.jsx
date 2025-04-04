@@ -44,7 +44,7 @@ function ButtonUpdater() {
   return <button onClick={() => {
     setMessageAtomCount(c => c + 1);
   }}>
-
+    Update message
   </button>
 }
 export default App
