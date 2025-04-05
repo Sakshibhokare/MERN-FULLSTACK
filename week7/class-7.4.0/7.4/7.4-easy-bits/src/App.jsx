@@ -19,6 +19,7 @@ function MainApp() {
   const messagingAtomCount = useRecoilValue(messagingAtom)
   const totalNotificationCount = useRecoilValue(totalNotificationSelector);
 
+  //this variable can not be used outside 
   // const totalNotificationCount = useMemo(() => {
   //   return networkNotificationCount + jobsAtomCount + notificationsAtomCount + messagingAtomCount;
   // }, [networkNotificationCount, jobsAtomCount, notificationsAtomCount, messagingAtomCount]) 
@@ -32,6 +33,8 @@ function MainApp() {
       <button>Messaging ({messagingAtomCount})</button>
       <button>Notifications ({notificationsAtomCount})</button>
 
+      {/* will use selector to get the sum of all notifications 
+      the value which is not coming from bc, which is the sum of other values  */}
       <button>Me ({totalNotificationCount})</button>
 
       <ButtonUpdater></ButtonUpdater>
