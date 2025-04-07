@@ -1,4 +1,3 @@
-
 import './App.css'
 import { RecoilRoot, useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil'
 import { notifications, totalNotificationSelector } from './atoms'
@@ -12,6 +11,8 @@ function App() {
 }
 
 function MainApp() {
+  //will get the values from bc in our atom file, 
+  //access through variables 
   const [networkCount, setNetworkCount] = useRecoilState(notifications)
   const totalNotificationCount = useRecoilValue(totalNotificationSelector);
 
@@ -26,7 +27,7 @@ function MainApp() {
   return (
     <>
       <button>Home</button>
-      
+
       <button>My network ({networkCount.networks >= 100 ? "99+" : networkCount.networks})</button>
       <button>Jobs {networkCount.jobs}</button>
       <button>Messaging ({networkCount.messaging})</button>
