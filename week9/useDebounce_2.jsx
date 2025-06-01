@@ -12,7 +12,7 @@ function useDebounce(value, timeout) {
         let timeoutNumber = setTimeout(() => {
             setDebouncevalue(value);
         }, timeout);
-        //keep stopping old clocks
+        //keep stopping old clocks, need to stop old clock if you writing very fast
         return () => {
             clearInterval(timeoutNumber)
         }
