@@ -43,3 +43,18 @@ function getFirstEle<T>(arr: T[]) {
 const el1 = getFirstEle<string>(["my", "name"]);
 const el2 = getFirstEle([1, 8, 5,]);
 const el3 = getFirstEle([true, false]);
+
+
+
+// 3 topic: imports and exports 
+// if we exports like 
+export const a = 1;
+export const b = 2;
+// then we have to import like 
+// import {a, b} from "./a"
+
+// if we export like 
+const s = 1;
+export default s; //no need to decode {}
+// then import
+// import s from "./s"
