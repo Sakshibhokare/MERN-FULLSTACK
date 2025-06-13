@@ -26,3 +26,20 @@ const value = firstEl(["hello"]);
 // if you want that the array should only contain
 // string or numbers then we can use generics
 // generics enable u to create component that work with any type while still providing compile time type safety 
+// example for generics 
+{/* <T> represents that the type can be anything  */ }
+function identity<T>(arg: T) {
+    return arg;
+}
+
+let output1 = identity<string>("my string");
+let output2 = identity<number>(100);
+
+// 2nd exm
+function getFirstEle<T>(arr: T[]) {
+    return arr[0];
+}
+//if we mention the type then we can not give mixed array
+const el1 = getFirstEle<string>(["my", "name"]);
+const el2 = getFirstEle([1, 8, 5,]);
+const el3 = getFirstEle([true, false]);
