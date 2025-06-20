@@ -18,4 +18,6 @@
 // they have create there own runtime v8 engine
 
 //3. initializing a worker
-// npm create cloudflare -- my-app 
+// npm create cloudflare -- my-app
+// npx wrangler login //to log in into the account
+// npm run deploy // to deploy application 
