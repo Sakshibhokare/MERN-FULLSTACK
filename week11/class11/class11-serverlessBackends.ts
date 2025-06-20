@@ -15,5 +15,7 @@
 // Cloudflare workers
 
 //2. how cloudflare workers works: cloudflare workers do not use nodejs runtime, not bun
-// they have create there own runtime v8 engine 
+// they have create there own runtime v8 engine
 
+//3. initializing a worker
+// npm create cloudflare -- my-app 
