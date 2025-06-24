@@ -24,4 +24,9 @@
 
 // express does not work on cloudflare so we use hono library instead
 // command: npm create hono@latest hono-app
-//easy to write code with hono, easy writing 
+//easy to write code with hono, easy writing
+
+// wrangler is use for communicating with cloudflare
+//like howami that gives info about our account, help in deployment anbd login
+
+//hono is a routing framework 
