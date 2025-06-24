@@ -20,4 +20,8 @@
 //3. initializing a worker
 // npm create cloudflare -- my-app
 // npx wrangler login //to log in into the account
-// npm run deploy // to deploy application 
+// npm run deploy // to deploy application
+
+// express does not work on cloudflare so we use hono library instead
+// command: npm create hono@latest hono-app
+//easy to write code with hono, easy writing 
