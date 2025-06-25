@@ -27,3 +27,45 @@ function updateUser2(updatePorps: UpdatePropsOptional) {
 }
 
 updateUser2({ name: 'demo' });
+
+//3rd readonly
+// if we want values to be constant for array and obj 
+// we will use readonly 
+// by using const a = [1, 23, 4,5] we can change the internal values of array like a[1], a[2]
+// same with obj 
+type User2 = {
+    readonly name: String;
+    readonly age: number
+}
+
+const user2: User2 = {
+    name: 'johnny',
+    age: 32
+}
+
+//try changing
+// user2.name="sunny"; // it will trw an error 
+
+// we can make whole obj readonly 
+const newUser: Readonly<User2> = {
+    name: "something",
+    age: 23
+}
+
+
+//4th Record and maps
+//Record is a typescript concept  
+// Record is use to give type of key and it's value together
+type User1 = Record<string, number>
+
+const users: User1 = {
+    "key": -9,
+    "key1": 990
+}
+
+//Map is a js concept
+const users1 = new Map()
+users1.set("key1", { name: "ram", age: 90 });
+users1.set("key2", { name: 'sham', age: 30 });
+
+users1.delete("key1");
