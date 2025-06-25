@@ -1,0 +1,2 @@
+any big application uses monorepo to keep backend and frontend folder in one repo
+

@@ -69,3 +69,13 @@ users1.set("key1", { name: "ram", age: 90 });
 users1.set("key2", { name: 'sham', age: 30 });
 
 users1.delete("key1");
+// we can specify the type of key value pair 
+const users3 = new Map<String, User>();
+
+
+//5th Exclude 
+// exclude something from the og obj 
+type EventType = 'click' | 'scroll' | 'mouse';
+type ExcludeEvent = Exclude<EventType, 'scroll'>
+
+//6th Type inference in Zod 
