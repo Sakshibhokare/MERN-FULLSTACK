@@ -78,4 +78,5 @@ const users3 = new Map<String, User>();
 type EventType = 'click' | 'scroll' | 'mouse';
 type ExcludeEvent = Exclude<EventType, 'scroll'>
 
-//6th Type inference in Zod 
+//6th Type inference in Zod
+// validating the inputs using zod 
