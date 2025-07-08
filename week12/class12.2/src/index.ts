@@ -12,9 +12,10 @@ interface User {
 // will define which properties of interface we want to use by using pick function 
 // why pick function why not to create another interface: by using pick method we would not to be worried about changing the types of argument, in future if the type got changed we will not be required to change the type 
 type UpdateProps = Pick<User, 'name' | 'age' | 'email'>
-function updateUser(updatedProps: UpdateProps) {
-    //hit the db to update the user 
+function updateUser(updatedProps: UpdateProps) { //
+    //hit the db to update the user
 }
+
 
 //2nd partial 
 //if we want that all args should be optional the we have two options to do this
