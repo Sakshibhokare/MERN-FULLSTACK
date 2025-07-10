@@ -23,7 +23,7 @@ function updateUser(updatedProps: UpdateProps) { //
 //second use partial, 
 type UpdatePropsOptional = Partial<UpdateProps>
 
-function updateUser2(updatePorps: UpdatePropsOptional) {
+function updateUser2(updatePorps: UpdatePropsOptional) { //
 
 }
 
