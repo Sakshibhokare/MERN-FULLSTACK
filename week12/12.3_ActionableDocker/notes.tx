@@ -1,0 +1,24 @@
+1. container:
+container is something like a miny computer in our main computer
+we can execute file in that container and our main computer does not care about that
+
+suppose node index.js is running on port 3000 and we open localhost 3000 of our main computer nothing will be running over there 
+
+2. Images: 
+ex mongoDb image, it has cpp python as a dependency 
+so will package everything together and create image 
+Image is nothing but a lot of code, which includes all necessary things to start mongodb 
+
+you can get an image from docker hub, aws registry, google registry etc. 
+
+when we want to use that we will take that image locally and start the container 
+
+3. Actually start the container: 
+docker run 
+docker run -p 27017:27017 mongo //port mapping anything commoing on port left will get mapped to the port right
+docker ps
+docker kill
+
+for postgres 
+password can be anything 
+docker run -e POSTGRES_PASSWORD=myscreatepassowrd -d -p 5432:5432 postgres
