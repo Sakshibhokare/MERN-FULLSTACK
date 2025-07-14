@@ -20,5 +20,5 @@ docker ps
 docker kill
 
 for postgres 
-password can be anything 
-docker run -e POSTGRES_PASSWORD=myscreatepassowrd -d -p 5432:5432 postgres
+password can be anything, if not provided the password and username then the default values will get set 
+docker run -e POSTGRES_PASSWORD=myscreatepassowrd POSTGRES_USER=sakshii -d -p 5432:5432 postgres
