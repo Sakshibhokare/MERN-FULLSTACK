@@ -10,3 +10,6 @@ it makes our backend strict schema, they reqiuire you to :
 2. put in data that follows that schema 
 3. update the schema as your application changes and perform migrations 
 
+
+1. we create a database locally using docker 
+2. 
