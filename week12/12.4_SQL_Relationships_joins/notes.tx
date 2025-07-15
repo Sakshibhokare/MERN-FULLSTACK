@@ -1,0 +1,12 @@
+why SQL prefer :
+NoSql is completely schema less, which mean you can add balance as a number, you can add balance as amount or string, 
+that means there are no checks present on the database level 
+so most of the project prefer SQL databases 
+
+on the other hand SQL will not allow to add string in balance if it is defined as a number 
+
+it makes our backend strict schema, they reqiuire you to :
+1. define your schema
+2. put in data that follows that schema 
+3. update the schema as your application changes and perform migrations 
+
