@@ -91,3 +91,73 @@ insertUserData("'', '', '', DELETE * FROM users;", "demo")
 
 
 // ######## Joins 
+// postgres=# SELECT * FROM users;
+//  id | username |        email
+// ----+----------+---------------------
+//   1 | alice    | alice@example.com
+//   2 | bob      | bob@example.com
+//   3 | charlie  | charlie@example.com
+// (3 rows)
+
+// postgres=# SELECT * FROM addresses;
+//  id | user_id |     address     |   city   |  country
+// ----+---------+-----------------+----------+-----------
+//   1 |       1 | 123 Main Street | New York | USA
+//   2 |       2 | 456 High Street | London   | UK
+//   3 |       2 | 789 Elm Street  | Sydney   | Australia
+
+//  SELECT u.username, u.email, a.address, a.city, a.country
+// FROM users u
+// JOIN addresses a ON u.id = a.user_id;
+//  username |       email       |     address     |   city   |  country
+// ----------+-------------------+-----------------+----------+-----------
+//  alice    | alice@example.com | 123 Main Street | New York | USA
+//  bob      | bob@example.com   | 456 High Street | London   | UK
+//  bob      | bob@example.com   | 789 Elm Street  | Sydney   | Australia
+//1. Inner join 
+//  Returns only matching rows from both tables.
+
+// sql
+// Copy code
+// SELECT users.username, addresses.address
+// FROM users
+// INNER JOIN addresses ON users.id = addresses.user_id;
+
+// 2. Left Join 
+//  Returns all rows from the left table, and matching rows from the right (NULL if no match).
+
+// sql
+// Copy code
+// SELECT users.username, addresses.address
+// FROM users
+// LEFT JOIN addresses ON users.id = addresses.user_id;
+//  username |     address
+// ----------+-----------------
+//  alice    | 123 Main Street
+//  bob      | 456 High Street
+//  bob      | 789 Elm Street
+//  charlie  |
+
+//  RIGHT JOIN
+// // ⟶ Returns all rows from the right table, and matching rows from the left (NULL if no match).
+// SELECT users.username, addresses.address
+// FROM users
+// RIGHT JOIN addresses ON users.id = addresses.user_id;
+// username |     address
+// ----------+-----------------
+//  alice    | 123 Main Street
+//  bob      | 456 High Street
+//  bob      | 789 Elm Street
+
+// FULL JOIN in SQL (also called FULL OUTER JOIN)
+// 📘 One-line Explanation:
+// A FULL JOIN returns all rows from both tables, matching where possible, and filling with NULL where there's no match.
+// SELECT users.username, addresses.address
+// FROM users
+// FULL JOIN addresses ON users.id = addresses.user_id;
+//  username |     address
+// ----------+-----------------
+//  alice    | 123 Main Street
+//  bob      | 456 High Street
+//  bob      | 789 Elm Street
+//  charlie  |
