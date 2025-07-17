@@ -41,3 +41,21 @@ createUsersTable();
 insertUserData("sakshi", "demo");
 //this is called as sql injection 
 insertUserData("'', '', '', DELETE * FROM users;", "demo")
+
+
+// ####### relationship, Transactions and Joins 
+// Relationship :
+// suppose one user has mulitple adresses then will create a  separate table for addresses where will have id and user id 
+// for same user_id  will have multiple addresses stored 
+// that user_it will be our foreign key 
+
+//when we say that user_it is the foreign key 
+// then sql first check if that id already exists into the users table 
+// if it does not exist it will throw an error and will nor store that value 
+
+// CREATE TABLE addresses(
+//   id SERIAL PRIMARY KEY,
+//   user_id INTERGER NOT null,
+//   City ... 
+//   FOREIGN KEY (user_id) REFERENCE users(id)
+// )
