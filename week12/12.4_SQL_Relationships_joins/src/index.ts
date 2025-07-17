@@ -57,5 +57,37 @@ insertUserData("'', '', '', DELETE * FROM users;", "demo")
 //   id SERIAL PRIMARY KEY,
 //   user_id INTERGER NOT null,
 //   City ... 
-//   FOREIGN KEY (user_id) REFERENCE users(id)
+//   FOREIGN KEY (user_id) REFERENCE users(id) on DELETE CASCADE
 // )
+// ON DELETE CASCADE MEANS WHEN I DELETE USER FROM USERS TABLE ALL RELATED ENTRIES WILL BE DELETED 
+// IF THE USER DOES NOT EXITS THE HIS ADDRESSES WILL BE DELETED 
+
+// we have ON DELETE RISTRICT: THIS RESTRICT TO DELETE THE USER FROM USERS TABLE, 
+// IF YOU WANT TO DELETE THE USER FROM USERS TABLE, first you will have to delete the records from addresses first then delete user from users 
+
+
+
+//####### TRANSACTIONS 
+// it is something when one query runs and tells that i am good to go for a transactions 
+// after that all queries will run togther or none of them will run 
+// if money is debited the the receiving query will also run 
+// if one of them fails it will revert back ]
+// example 
+// BEGIN;  -- Start the transaction
+
+// -- 1. Deduct from Alice
+// UPDATE bank_accounts
+// SET balance = balance - 200
+// WHERE name = 'Alice';
+
+// -- 2. Add to Bob
+// UPDATE bank_accounts
+// SET balance = balance + 200
+// WHERE name = 'Bob';
+
+// COMMIT;  -- Commit the transaction
+// If something goes wrong (e.g., Bob's update fails), you can use:
+// ROLLBACK;  -- Undo all changes
+
+
+// ######## Joins 
