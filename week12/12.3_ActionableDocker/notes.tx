@@ -23,3 +23,9 @@ for postgres
 password can be anything, if not provided the password and username then the default values will get set 
 docker run -e POSTGRES_PASSWORD=myscreatepassowrd POSTGRES_USER=sakshii -d -p 5432:5432 postgres
 docker run -e POSTGRES_PASSWORD=mypassword -e POSTGRES_USER=sakshi -d -p 5432:5432 postgres
+
+for postgres we need psql locally, if you do not want to install locally 
+then use the following command: docker exec -it containerIDAfterDoingPS /bin/bash
+with this we can run commands in our container, we have install postgres image in our container which already have psql in it 
+
+then connect psql to database 

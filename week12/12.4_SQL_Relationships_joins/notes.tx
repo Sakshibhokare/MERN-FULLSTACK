@@ -12,4 +12,14 @@ it makes our backend strict schema, they reqiuire you to :
 
 
 1. we create a database locally using docker 
-2. 
+2. psql is terminal based interface for postgres 
+this will let you put and get data from postgres 
+for this will tell docker let you run commands in container: 
+docker exec it container_id /bin/bash
+
+then connect to psql:
+pasql -h localhost -d postgres -U sakshi 
+
+if you can see postgres=# then you are good to go
+
+2. pg is node.js library you can use in backend to store data in postgres DB (similar to mongoose)
