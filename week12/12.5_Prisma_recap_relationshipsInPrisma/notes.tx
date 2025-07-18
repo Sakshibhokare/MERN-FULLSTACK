@@ -1,0 +1,16 @@
+ORM is use to interact with database 
+instead writing complex queries we can use PRISMA 
+WILL write the same queries in prisma for any database 
+ 
+1.st command to initialize prisma
+npx prisma init
+2.nd migration: 
+npx prisma migrate dev --name init_todo_schema 
+after using this cammand migration folder will be created 
+it will contain all sql queries 
+3. any time we add new field in the table, we run the same 
+command (2) with relatable name 
+4. prisma not only give you queries, it will generate clients 
+using npx prisma generate command 
+client is nothing but your db name, which means user, todo etc. 
+
