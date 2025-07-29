@@ -16,4 +16,4 @@ async function insertUser(username:string, password:string, firstname:string, la
     })
 }
 
-insertUser("demo", "demo", "demo", "demo");
+insertUser("demo123test", "demo344", "demo56", "demo5656");

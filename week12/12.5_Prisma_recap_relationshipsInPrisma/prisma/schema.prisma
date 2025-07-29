@@ -21,6 +21,7 @@ model User{
   password String
   firstname String?
   lastname String? 
+  // todos Todo[]
 }
 
 model todo{
@@ -29,4 +30,5 @@ model todo{
   description String
   done Boolean @default(false)
   userId Int
+  // user User @relation(fields: [userId], references: [id]) this is the way to add a relation or foreign key 
 }

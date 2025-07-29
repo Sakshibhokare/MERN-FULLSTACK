@@ -24,4 +24,4 @@ function insertUser(username, password, firstname, lastname) {
         });
     });
 }
-insertUser("demo", "demo", "demo", "demo");
+insertUser("demo123test", "demo344", "demo56", "demo5656");
