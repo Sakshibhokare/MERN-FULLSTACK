@@ -1,0 +1,15 @@
+why prisma do not work on serverless?
+there can be many connection open to the database which are open
+it could have 100s of workers running on diff location, this will hit the database limit 
+this will hit the maximum connection limit to prevent this connection pooling has interduced 
+there are many dependancis with node for prisma, ex engine this the reason why prisma do not work with cloud flare
+
+connection pooling:instead of connecting all workers directly to the database
+will create a connection pooling, a point where many connection will come
+from this point will connect to the database 
+so your database will get limited connection requests
+
+worker1 worker2 ... workern-> Conn. pool -> database
+
+
+you have to make some changes to let prisma work on cloud flare app
