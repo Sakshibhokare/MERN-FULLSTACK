@@ -13,3 +13,12 @@ worker1 worker2 ... workern-> Conn. pool -> database
 
 
 you have to make some changes to let prisma work on cloud flare app
+if you want to deploy prisma on cloudflare, prisma -> cloudflare -> connection pool -> database
+will have to make some changes, below are the steps:
+step1. initialize the cloudflare project: npm create cloudflare@latest
+it will initialize the empty worker app 
+
+step2. 
+
+
+
