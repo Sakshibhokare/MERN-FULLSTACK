@@ -19,6 +19,32 @@ step1. initialize the cloudflare project: npm create cloudflare@latest
 it will initialize the empty worker app 
 
 step2. 
+Set up prisma ORM: npm install --save-dev prisma
+initialize prisma npx prisma init 
 
+Step 3: update ur database schema 
+npx prisma migrate dev --name init 
 
+Step 4:this the way to use prisma orm on cloudflare 
+Enable accelerate in the Prisma Data platform
+to get started with prisma accelerate
+1. sign up for a free prisma data platform account
+2. create a project // it means we are creating workers 
+3. Navigate to the project you created  // give the url of the original project 
+4. Enable accelerate
+5. Generate an accelerate connection string and copy it to your clipboard // get the url of connection pool and paste instead of db url 
 
+step 5: install connection accelerate dependancis:
+npm i @prisma/extension-accelerate
+
+step 6: Generate Prisma client 
+next, Generate prisma client that connects to your database through Prisma accelerate over HTTP.
+npx prisma generate --no-engine 
+here many things will be skiped that are not required at cloud side 
+
+step 7: Deploy 
+npx wrangler whoami
+npm run deploy : it will deploy the worker 
+
+https://shorturl.at/kxFMW
+https://www.prisma.io/docs/orm/prisma-client/deployment/edge/deploy-to-cloudflare
