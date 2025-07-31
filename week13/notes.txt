@@ -1,0 +1,13 @@
+Stack: 
+react in the frontend
+cloudflare worker in the backend
+zod, type inference for the frontend types
+typscript
+prisma
+postgres
+jwt for authentication
+
+step2:
+initialize the backend 
+initialize hono based cloudflare worker app 
+npm create hono@latest 
