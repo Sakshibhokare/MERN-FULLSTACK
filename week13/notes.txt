@@ -11,3 +11,17 @@ step2:
 initialize the backend 
 initialize hono based cloudflare worker app 
 npm create hono@latest 
+
+Step 3: initialize handlers 
+our backend will have 4 routes
+1. POST/api/signup
+2. POST/api/sigin
+3. POST/ api/blog
+4. PUT/api/blog
+5. GET/api/blog 
+
+Step 3: prisma accelerate setup 
+https://www.prisma.io/docs/orm/prisma-client/deployment/edge/deploy-to-cloudflare
+npm i prisma 
+npx prisma init 
+add db url in .env 
