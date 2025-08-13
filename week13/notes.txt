@@ -31,8 +31,12 @@ Step 4: initialize the schema shape of database
 Step 5: run prisma migrate command
 npx prisma migrate dev --name init_schema
 
-Step 6: generate prisma client 
+Step 6: generate prisma client: 
+it generates a client folder which help accessing the tables and perform some actions on it 
 npx prisma generate --no-engine
+
+note: every time when you make changes into schema.prisma file we have to run 2 commands
+1 for migration and 2nd one for regeneration of client
 
 Step 7: add the accelerate extension 
 npm i @prisma/extension-accelerate
