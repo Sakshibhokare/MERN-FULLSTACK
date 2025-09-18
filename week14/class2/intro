@@ -1,0 +1,16 @@
+// routing in express vs next js
+// next js 
+// export function GET(){
+//     return Response.json({
+//         email:"demo.com",
+//         name:"sakshi"
+//     })
+// } 
+
+// // express 
+// app.get('api/user', (req, res)=>{
+//     res.json({
+//         email:"demo.com",
+//         name:"sakshis"
+//     })
+// })
